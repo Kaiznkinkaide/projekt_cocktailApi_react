@@ -11,22 +11,23 @@ const MainProvider = ({ children }) => {
     const [searchInput, setSearchInput] = useState("")
 
 
-useEffect(() => {
-    let api
-
-    switch (true) {
-        case Boolean(userChoice):
-            api = userChoice === "Non_Alcoholic"
-            ? "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic"
-            : `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${userChoice}`
-        break;
-        case Boolean(searchInput):
-            api = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchInput}`
-        break;
-        default:
-            api = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
-        break;
-    }
+    useEffect(() => {
+        let api;
+    
+        switch (userChoice) {
+            case "Non_Alcoholic":
+                api = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic";
+                break;
+            case "random":
+                api = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
+                break;
+            case "search":
+                api = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchInput}`;
+                break;
+            default:
+                api = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${userChoice}`;
+                break;
+        }
 
     const apiFetch = async () => {
         const resp = await axios.get(api)

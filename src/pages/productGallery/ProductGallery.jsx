@@ -9,7 +9,7 @@ const ProductGallery = () => {
 
     useEffect(() => {
         setUserChoice(categories);
-    }, [categories]);
+    }, [data]);
 
 
     return (
@@ -19,8 +19,8 @@ const ProductGallery = () => {
         {data.map((cocktail, index) => {
             return (
                 <button key={index}>
-                    <h2>{cocktail.strDrink}</h2>
-                    <img src={cocktail.strDrinkThumb}/>
+                    <h2>{cocktail?.strDrink}</h2>
+                    <img src={cocktail?.strDrinkThumb}/>
                 </button>
             )
         })}
