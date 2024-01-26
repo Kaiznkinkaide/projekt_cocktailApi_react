@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import { mainContext } from "../../context/MainProvider";
-import RumCard from '../../assets/component/cocktailCard/RumCard';
 
 const RumPage = () => {
     const {rum, setRum} = useContext(mainContext)
@@ -11,9 +10,9 @@ const RumPage = () => {
             <section>
                 {rum.map((rums, index)=>{
                     return(
-                        <div key={index}>
-                            <RumCard
-                            rums={rums}/>
+                        <div key={index}> 
+                        <img src={rums.strDrinkThumb}  />
+                        <h2>{rums.strDrink}</h2>
                         </div>
                     )
                 })}

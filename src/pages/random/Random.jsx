@@ -1,26 +1,24 @@
 import React, { useContext } from 'react'
 import { mainContext } from '../../context/MainProvider';
-import RandomCard from '../../assets/component/cocktailCard/RandomCard';
+
 
 const Random = () => {
-    const {random, setRandom} = useContext(mainContext)
+    const {random,} = useContext(mainContext)
+
 
     return ( 
         <>
-            <section>
-                
-                   
-                        <div>
-                            <RandomCard
-                            random={random}/>
-                        </div>
-       
-  
-                 
-            </section> 
-            
+        {random ? (
+            <div>
+                <img src={random[0]?.strDrinkThumb}/>
+                <h2>{random[0]?.strDrink}</h2>
+            </div>
+        ) : (
+                <p>Loading...</p>
+        )
+    }
         </>
-     );
+    );
 }
 
 export default Random

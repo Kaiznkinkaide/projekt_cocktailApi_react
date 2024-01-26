@@ -1,6 +1,5 @@
 
 import { useContext } from "react";
-import GinCard from "../../assets/component/cocktailCard/GinCard"
 import { mainContext } from "../../context/MainProvider";
 
 
@@ -15,8 +14,8 @@ const GinPage = () => {
                 {gin.map((gins, index)=>{
                     return(
                         <div key={index}>
-                            <GinCard
-                            gins={gins}/>
+                            <img src={gins.strDrinkThumb}  />
+                            <h2>{gins.strDrink}</h2>
                         </div>
                     )
                 })}

@@ -17,7 +17,6 @@ const MainProvider = ({children}) => {
         const apiFetch = async () =>{
             const resp = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin`)
             setGin(resp.data.drinks)
-            console.log(resp.data.drinks);
         }
 apiFetch()
     },[])
@@ -27,7 +26,6 @@ apiFetch()
         const apiFetch = async () =>{
             const resp = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Vodka`)
             setVodka(resp.data.drinks)
-            console.log(resp.data.drinks);
         }
 apiFetch()
     },[])
@@ -36,7 +34,6 @@ apiFetch()
         const apiFetch = async () =>{
             const resp = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Rum`)
             setRum(resp.data.drinks)
-            console.log(resp.data.drinks);
         }
 apiFetch()
     },[])
@@ -45,7 +42,6 @@ apiFetch()
         const apiFetch = async () =>{
             const resp = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Scotch`)
             setScotch(resp.data.drinks)
-            console.log(resp.data.drinks);
         }
 apiFetch()
     },[])
@@ -53,17 +49,15 @@ apiFetch()
     useEffect(()=>{
         const apiFetch = async () =>{
             const resp = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic`)
-            setNonAlc(resp.drinks)
-            console.log(resp.drinks);
+            setNonAlc(resp.data.drinks)
         }
 apiFetch()
     },[])
 
     useEffect(()=>{
         const apiFetch = async () =>{
-            const resp = await axios.get(`www.thecocktaildb.com/api/json/v1/1/random.php`)
-            setRandom(resp)
-           
+            const resp = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/random.php`)
+            setRandom(resp.data.drinks)
         }
 apiFetch()
     },[])
@@ -75,11 +69,10 @@ apiFetch()
         <mainContext.Provider value={{gin, setGin, vodka, setVodka, rum, setRum, scotch, setScotch, nonAlc, setNonAlc, random, setRandom}}>
             {children}
         </mainContext.Provider>
-       
         </>
-     );
+    );
 }
- 
+
 export default MainProvider;
 
 

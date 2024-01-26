@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { mainContext } from "../../context/MainProvider";
-import ScotchCard from "../../assets/component/cocktailCard/ScotchCard";
 
 const ScotchPage = () => {
     const {scotch, setScotch} = useContext(mainContext)
@@ -12,8 +11,8 @@ const ScotchPage = () => {
                 {scotch.map((scotchs, index)=>{
                     return(
                         <div key={index}>
-                            <ScotchCard
-                            scotchs={scotchs}/>
+                            <img src={scotchs.strDrinkThumb}  />
+                            <h2>{scotchs.strDrink}</h2>
                         </div>
                     )
                 })}

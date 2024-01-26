@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import { mainContext } from '../../context/MainProvider';
-import NonAlcCrad from '../../assets/component/cocktailCard/NonAlcCrad';
 
 const NonAlc = () => {
     const {nonAlc, setNonAlc} = useContext(mainContext)
@@ -11,8 +10,8 @@ const NonAlc = () => {
                 {nonAlc.map((nonAlcs, index)=>{
                     return(
                         <div key={index}>
-                            <NonAlcCrad
-                            nonAlcs={nonAlcs}/>
+                            <img src={nonAlcs.strDrinkThumb}  />
+                            <h2>{nonAlcs.strDrink}</h2>
                         </div>
                     )
                 })}

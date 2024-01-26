@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import VodkaCard from "../../assets/component/cocktailCard/VodkaCard";
 import { mainContext } from "../../context/MainProvider";
 
 
@@ -15,8 +14,8 @@ const VodkaPage = () => {
                 {vodka.map((vodkas, index)=>{
                     return(
                         <div key={index}>
-                            <VodkaCard
-                            vodkas={vodkas}/>
+                            <img src={vodkas.strDrinkThumb}  />
+                            <h2>{vodkas.strDrink}</h2>
                         </div>
                     )
                 })}

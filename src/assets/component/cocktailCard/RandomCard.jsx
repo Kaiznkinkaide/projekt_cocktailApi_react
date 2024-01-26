@@ -1,10 +1,11 @@
 import React from 'react'
 
 const RandomCard = ({random}) => {
+
+    
+    console.log(random);
     return ( 
         <>
-         <img src={random.drinks.strDrinkThumb}/>
-         <h2>{random.drinks.strDrink}</h2>
         
         </>
      );
