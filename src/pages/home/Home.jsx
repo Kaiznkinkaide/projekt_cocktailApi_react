@@ -1,20 +1,20 @@
 
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const Home = () => {
 
-
+const {userChoice} = useParams()
 
 
     return ( 
         <>
         <h1>Home</h1>
-        <Link to="/gin"><button>Gin</button></Link>
-        <Link to="/vodka"><button>Vodka</button></Link>
-        <Link to="/rum"><button>Rum</button></Link>
-        <Link to="/scotch"><button>Scotch</button></Link>  
-        <Link to="/nonAlc"><button>Non Alcoholic</button></Link>  
-        <Link to="/random"><button>Random</button></Link>  
+        <Link to="/drinks/gin"><button>Gin</button></Link>
+        <Link to="/drinks/vodka"><button>Vodka</button></Link>
+        <Link to="/drinks/rum"><button>Rum</button></Link>
+        <Link to="/drinks/scotch"><button>Scotch</button></Link>  
+        <Link to="/drinks/Non_Alcoholic"><button>Non Alcoholic</button></Link>  
+        <Link to="/drinks/random"><button>Random</button></Link>  
         
         </>
      );
