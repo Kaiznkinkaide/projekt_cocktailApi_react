@@ -1,0 +1,18 @@
+footer {
+    background: #262B46;
+    color: white;
+    padding: 5rem 3rem 3rem 3rem;
+}
+
+footer h4 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    margin-bottom: 3rem;
+}
+
+
+footer .footerText {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}

@@ -1,42 +1,66 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+header {
+  background-color:#262B46 ;
+  color: white;
+  padding: 5rem 3rem;
+  position: sticky;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 70vh;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+main button {
+  color: white;
+  font-size: 1.8rem;
+  text-align: start;
+  padding-left: 2rem;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.userChoice {
+  border: none;
+  width:100%;
+  height:100% ;
 }
 
-.card {
-  padding: 2em;
+.gin {
+  background-color: #6FC3DF;
 }
 
-.read-the-docs {
-  color: #888;
+.vodka {
+  background-color: #8D82C4;
+}
+
+.rum {
+  background-color: #EC8D81;
+}
+
+.scotch {
+  background-color: #E7B788;
+}
+
+.nonAlc {
+  background-color: #8EA9E8;
+}
+
+.random {
+  background-color: #87C5A4;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin: 1rem;
+}
+
+.productcard {
+  cursor: pointer;
+
+}
+
+.productcard img {
+  width: 300px;
 }
