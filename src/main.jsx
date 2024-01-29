@@ -3,12 +3,13 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import { BrowserRouter } from 'react-router-dom'
-import MainProvider from './context/MainProvider.jsx'
+import MainProviderContext from './context/MainProviderContext.jsx'
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
-      <MainProvider>
+        <MainProviderContext>
         <App />
-      </MainProvider>
+        </MainProviderContext>
     </BrowserRouter>
 )

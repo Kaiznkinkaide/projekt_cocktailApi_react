@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import { mainContext } from '../../context/MainProvider'
+import  { mainContext } from '../../context/MainProviderContext'
+
 
 const ProductGallery = () => {
     

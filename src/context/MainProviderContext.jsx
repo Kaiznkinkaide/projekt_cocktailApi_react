@@ -3,7 +3,8 @@ import axios from "axios";
 
 export const mainContext = createContext();
 
-const MainProvider = ({ children }) => {
+
+const MainProviderContext = ({ children }) => {
     const [id, setId] = useState()
     const [data, setData] = useState()
     const [cocktail, setCocktail] = useState()
@@ -44,4 +45,4 @@ const MainProvider = ({ children }) => {
   );
 };
 
-export default MainProvider;
+export default MainProviderContext;
